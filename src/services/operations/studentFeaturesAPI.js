@@ -62,8 +62,8 @@ export async function BuyCourse(
     if (!orderResponse.data.success) {
       throw new Error(orderResponse.data.message)
     }
-    console.log("PAYMENT RESPONSE FROM BACKEND............", orderResponse.data)
-    console.log("env file: ", process.env.REACT_APP_RAZORPAY_KEY);
+    // console.log("PAYMENT RESPONSE FROM BACKEND............", orderResponse.data)
+    // console.log("env file: ", process.env.REACT_APP_RAZORPAY_KEY);
 
     // Opening the Razorpay SDK
     const options = {
@@ -71,7 +71,7 @@ export async function BuyCourse(
       currency: orderResponse.data.data.currency,
       amount: `${orderResponse.data.data.amount}`,
       order_id: orderResponse.data.data.id,
-      name: "StudyNotion",
+      name: "StudyHub",
       description: "Thank you for Purchasing the Course.",
       image: rzpLogo,
       prefill: {
@@ -106,7 +106,7 @@ async function verifyPayment(bodyData, token, navigate, dispatch) {
       Authorization: `Bearer ${token}`,
     })
 
-    console.log("VERIFY PAYMENT RESPONSE FROM BACKEND............", response)
+    // console.log("VERIFY PAYMENT RESPONSE FROM BACKEND............", response)
 
     if (!response.data.success) {
       throw new Error(response.data.message)

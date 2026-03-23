@@ -9,6 +9,8 @@ import TimelineSection from "../components/core/HomePage/Timeline"
 import LearningLanguageSection from "../components/core/HomePage/LearningLanguageSection"
 import InstructorSection from "../components/core/HomePage/InstructorSection"
 import ExploreMore from "../components/core/HomePage/ExploreMore"
+import Footer from '../components/common/Footer'
+import ReviewSlider from '../components/common/ReviewSlider'
 
 const Home = () => {
   return (
@@ -153,7 +155,7 @@ const Home = () => {
                       </div>
                       <div className="flex flex-col items-start gap-10 lg:w-[40%]">
                           <div className="text-[16px]">
-                              The modern StudyNotion is the dictates its own terms. Today, to
+                              The modern StudyHub is the dictates its own terms. Today, to
                               be a competitive specialist requires more than professional
                               skills.
                           </div>
@@ -180,8 +182,11 @@ const Home = () => {
               <h1 className="text-center text-4xl font-semibold mt-8">
                   Reviews from other learners
               </h1>
-              {/* <ReviewSlider /> */}
+              <ReviewSlider />
           </div>
+
+          {/* Footer */}
+          <Footer />
     </div>
   )
 }

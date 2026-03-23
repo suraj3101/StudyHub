@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link, matchPath, useLocation } from 'react-router-dom'
-import logo from "../../assets/Logo/Logo-Full-Light.png"
+// import logo from "../../assets/Logo/Logo-Full-Light.png"
+// import Logo from "../../assets/Logo/StudyHub.png"
 import { NavbarLinks } from "../../data/navbar-links"
 import { useSelector } from 'react-redux'
 import { BsChevronDown } from "react-icons/bs"
@@ -42,7 +43,48 @@ const Navbar = () => {
           <div className="flex w-11/12 max-w-maxContent items-center justify-between">
               {/* Logo */}
               <Link to="/">
-                  <img src={logo} alt="Logo" width={160} height={32} loading="lazy" />
+                  <svg width="200" height="50" viewBox="0 0 260 60" xmlns="http://www.w3.org/2000/svg">
+
+                      <defs>
+                          <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                              <stop offset="0%" stopColor="#FFFFFF" />
+                              <stop offset="100%" stopColor="#FFFFFF" />
+                          </linearGradient>
+
+                          <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                              <stop offset="0%" stopColor="#FFFFFF" />
+                              <stop offset="100%" stopColor="#FFFFFF" />
+                          </linearGradient>
+                      </defs>
+
+                      {/* Icon */}
+                      <rect x="5" y="10" rx="12" ry="12" width="40" height="40" fill="url(#grad1)" />
+
+                      <text
+                          x="25"
+                          y="38"
+                          textAnchor="middle"
+                          fontSize="20"
+                          fontWeight="700"
+                          fill="#0A0A0A"
+                          fontFamily="Segoe UI, sans-serif"
+                      >
+                          S
+                      </text>
+
+                      {/* Text */}
+                      <text
+                          x="60"
+                          y="38"
+                          fontSize="28"
+                          fontWeight="700"
+                          fontFamily="Segoe UI, sans-serif"
+                      >
+                          <tspan fill="url(#grad1)">Study</tspan>
+                          <tspan fill="url(#grad2)">Hub</tspan>
+                      </text>
+
+                  </svg>
               </Link>
               {/* Navigation links */}
               <nav className="hidden md:block">

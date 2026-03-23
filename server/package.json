@@ -1,16 +1,16 @@
 {
-	"name": "studynotion-backend",
+	"name": "studyhub-backend",
 	"version": "1.0.0",
-	"description": "studynotion-backend",
+	"description": "studyhub-backend",
 	"main": "index.js",
 	"scripts": {
 		"start": "node index.js",
 		"dev": "nodemon index.js"
 	},
 	"keywords": [
-		"studynotion-backend"
+		"studyhub-backend"
 	],
-	"author": "Saikat Mukherjee",
+	"author": "Suraj Gupta",
 	"license": "ISC",
 	"dependencies": {
 		"bcrypt": "^5.1.0",
